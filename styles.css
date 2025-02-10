@@ -3,6 +3,7 @@
     --secondary-color: #3498db;
     --text-color: #333;
     --light-gray: #f5f5f5;
+    --animation-duration: 0.6s;
 }
 
 * {
@@ -11,11 +12,21 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    max-width: 900px;
+    margin: 0 auto;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+main {
+    max-width: min(90%, 900px);
     margin: 0 auto;
     padding: 2rem;
 }
@@ -23,28 +34,40 @@ body {
 header {
     text-align: center;
     margin-bottom: 2rem;
-    padding-bottom: 2rem;
-    border-bottom: 2px solid var(--secondary-color);
+    padding: 4rem 2rem 2rem;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    color: white;
+}
+
+header.fade-in {
+    opacity: 0;
+    animation: fadeIn var(--animation-duration) ease-out forwards;
 }
 
 h1 {
-    color: var(--primary-color);
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 5vw, 2.5rem);
     margin-bottom: 0.5rem;
 }
 
 .contact-info {
-    color: var(--primary-color);
-    font-size: 1.1rem;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
 }
 
 section {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 h2 {
     color: var(--primary-color);
-    font-size: 1.5rem;
+    font-size: clamp(1.3rem, 3vw, 1.5rem);
     margin-bottom: 1rem;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid var(--secondary-color);
@@ -53,12 +76,23 @@ h2 {
 .experience-item, 
 .education-item {
     margin-bottom: 1.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.experience-item:hover, 
+.education-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .experience-item h3, 
 .education-item h3 {
     color: var(--secondary-color);
-    font-size: 1.2rem;
+    font-size: clamp(1.1rem, 2.5vw, 1.2rem);
     margin-bottom: 0.3rem;
 }
 
@@ -66,11 +100,12 @@ h2 {
     color: #666;
     font-style: italic;
     margin-bottom: 0.5rem;
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
 }
 
 .skills-list {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 1rem;
     list-style: none;
 }
@@ -79,7 +114,58 @@ h2 {
     background-color: var(--light-gray);
     padding: 0.5rem 1rem;
     border-radius: 20px;
-    font-size: 0.9rem;
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.skill-item:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+ul:not(.skills-list) {
+    padding-left: 1.5rem;
+}
+
+ul:not(.skills-list) li {
+    margin-bottom: 0.5rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+
+    header {
+        padding: 3rem 1rem 1.5rem;
+    }
+
+    .skills-list {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .experience-item, 
+    .education-item {
+        padding: 0.8rem;
+    }
+
+    .skills-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media print {
@@ -87,17 +173,14 @@ h2 {
         padding: 1rem;
     }
 
-    .skill-item {
-        border: 1px solid #ddd;
-    }
-}
-
-@media (max-width: 600px) {
-    body {
-        padding: 1rem;
+    .experience-item, 
+    .education-item {
+        box-shadow: none;
+        break-inside: avoid;
     }
 
-    h1 {
-        font-size: 2rem;
+    section {
+        opacity: 1;
+        transform: none;
     }
 }
