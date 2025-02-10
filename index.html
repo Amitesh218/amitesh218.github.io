@@ -3,69 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Professional Resume</title>
+    <title>Dynamic Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="fade-in">
-        <h1>Your Name</h1>
-        <div class="contact-info">
-            <p>email@example.com | (555) 555-5555</p>
-            <p>City, State | LinkedIn: linkedin.com/in/yourprofile</p>
+    <!-- Floating header (initially hidden) -->
+    <header class="floating-header">
+        <div class="section-indicator">Welcome</div>
+        <div class="profile-compact">
+            <img src="/api/placeholder/40/40" alt="Profile" class="profile-image-small">
+            <span class="name-small">Your Name</span>
         </div>
     </header>
 
+    <!-- Main content -->
     <main>
-        <section id="summary" class="scroll-animate">
-            <h2>Professional Summary</h2>
-            <p>Experienced professional with expertise in [your field]. Proven track record of [key achievement] with [number] years of experience in [industry/field]. Skilled in [key skill] and [key skill].</p>
-        </section>
-
-        <section id="experience" class="scroll-animate">
-            <h2>Work Experience</h2>
-            
-            <div class="experience-item">
-                <h3>Job Title</h3>
-                <div class="date-location">Company Name | Jan 2020 - Present | City, State</div>
-                <ul>
-                    <li>Accomplished [X] resulting in [Y] improvement</li>
-                    <li>Led team of [X] people to deliver [Y] project</li>
-                    <li>Developed and implemented [X] strategy leading to [Y] outcome</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <h3>Previous Job Title</h3>
-                <div class="date-location">Previous Company | Jan 2018 - Dec 2019 | City, State</div>
-                <ul>
-                    <li>Managed [X] project with budget of [Y]</li>
-                    <li>Increased [X] by [Y]% through implementation of [Z]</li>
-                    <li>Collaborated with [X] team to achieve [Y] goal</li>
-                </ul>
+        <!-- Hero section -->
+        <section id="intro" class="hero fade-in">
+            <div class="hero-content">
+                <img src="/api/placeholder/150/150" alt="Profile" class="profile-image-large">
+                <h1>Your Name</h1>
+                <div class="hero-text">
+                    <p>Short description about yourself</p>
+                    <p>Additional introduction text</p>
+                </div>
             </div>
         </section>
 
-        <section id="education" class="scroll-animate">
-            <h2>Education</h2>
-            <div class="education-item">
-                <h3>Degree Name</h3>
-                <div class="date-location">University Name | Graduation Year | City, State</div>
-                <p>Relevant coursework: Course 1, Course 2, Course 3</p>
+        <!-- Projects section -->
+        <section id="projects" class="scroll-animate">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="/api/placeholder/400/300" alt="Project 1" class="project-image">
+                    </div>
+                    <h3>Project Name 1</h3>
+                    <p>Project description goes here. Brief overview of what the project entails.</p>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="/api/placeholder/400/300" alt="Project 2" class="project-image">
+                    </div>
+                    <h3>Project Name 2</h3>
+                    <p>Project description goes here. Brief overview of what the project entails.</p>
+                </div>
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="/api/placeholder/400/300" alt="Project 3" class="project-image">
+                    </div>
+                    <h3>Project Name 3</h3>
+                    <p>Project description goes here. Brief overview of what the project entails.</p>
+                </div>
             </div>
-        </section>
-
-        <section id="skills" class="scroll-animate">
-            <h2>Skills</h2>
-            <ul class="skills-list">
-                <li class="skill-item">Skill 1</li>
-                <li class="skill-item">Skill 2</li>
-                <li class="skill-item">Skill 3</li>
-                <li class="skill-item">Skill 4</li>
-                <li class="skill-item">Skill 5</li>
-                <li class="skill-item">Skill 6</li>
-            </ul>
         </section>
     </main>
+
+    <!-- Modal for expanded images -->
+    <div class="modal" id="imageModal">
+        <div class="modal-content">
+            <img src="" alt="Expanded project image" id="expandedImage">
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
