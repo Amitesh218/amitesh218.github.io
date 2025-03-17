@@ -15,7 +15,7 @@ export const About = () => {
             About Me
           </h2>
 
-          <div className="rounded-xl p-8 border border-white/10 hover:-translate-y-1 transition-all bg-white/10 backdrop-blur-md">
+          <div className="rounded-xl p-8 border border-black/10 hover:-translate-y-1 transition-all bg-black/10 backdrop-blur-md">
             <p className="text-gray-300 mb-6">
               Passionate developer with expertise in building scalable web
               applications and creating innovative solutions.
@@ -53,40 +53,26 @@ export const About = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-            <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 transition-all bg-white/10 backdrop-blur-md">
+            <div className="p-6 rounded-xl border border-black/10 hover:-translate-y-1 transition-all bg-white/10 backdrop-blur-md">
               <h3 className="text-xl font-bold mb-4">🏫 Education</h3>
               <ul className="list-disc list-inside text-gray-300 space-y-2">
                 <li>
-                  <strong>B.S. in Computer Science</strong> - XYZ University
-                  (2016-2020)
+                  <strong>B.Tech. in Computer Science, with specialization in Cloud Computing</strong> - SRMIST Chennai
+                  (2022-2026)
                 </li>
                 <li>
                   Relevant Coursework: Data Structures, Web Development, Cloud
-                  Computing...
+                  Computing, Big Data tools, Machine Learning Algorithms.
                 </li>
               </ul>
             </div>
-            <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 transition-all bg-white/10 backdrop-blur-md">
+            <div className="p-6 rounded-xl border border-black/10 hover:-translate-y-1 transition-all bg-white/10 backdrop-blur-md">
               <h3 className="text-xl font-bold mb-4">💼 Work Experience</h3>
               <div className="space-y-4 text-gray-300">
                 <div>
                   <h4 className="font-semibold">
-                    Software Engineer at ABC Corp (2020 - Present)
+                    TBA
                   </h4>
-                  <p>
-                    Developed and maintained microservices for cloud-based
-                    applications.
-                  </p>
-                </div>
-
-                <div>
-                  <h4 className="font-semibold">
-                    Intern at DEF Startups (2019)
-                  </h4>
-                  <p>
-                    Assisted in building front-end components and integrating
-                    REST APIs.
-                  </p>
                 </div>
               </div>
             </div>
