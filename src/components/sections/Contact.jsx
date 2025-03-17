@@ -36,7 +36,7 @@ export const Contact = () => {
 
             {/* Instagram */}
             <a
-              href="https://www.instagram.com/your-instagram/"
+              href="https://www.instagram.com/weebcoder3000/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center w-full bg-pink-500 text-white py-3 px-6 rounded font-medium transition hover:-translate-y-0.5 hover:shadow-lg"
@@ -46,7 +46,7 @@ export const Contact = () => {
 
             {/* GitHub */}
             <a
-              href="https://github.com/your-github"
+              href="https://github.com/Amitesh218"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center w-full bg-gray-800 text-white py-3 px-6 rounded font-medium transition hover:-translate-y-0.5 hover:shadow-lg"
