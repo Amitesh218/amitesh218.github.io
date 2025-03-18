@@ -48,13 +48,12 @@ export const Projects = () => {
               transition-all
             "
             >
-              <h3 className="text-xl font-bold mb-2">AI Analytics Dashboard</h3>
+              <h3 className="text-xl font-bold mb-2">Bubbles</h3>
               <p className="text-gray-400 mb-4">
-                ML-powered data visualization platform with predictive analytics
-                and interactive reports.
+                A 2D platformer game using the godot engine, with soulslike gameplay
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
-                {["Python", "TensorFlow", "D3.js", "Flask"].map((tech, key) => (
+                {["Godot", "GDScript"].map((tech, key) => (
                   <span
                     key={key}
                     className="
@@ -71,7 +70,7 @@ export const Projects = () => {
               </div>
               <div className="flex justify-between items-center">
                 <a
-                  href="#" target="_blank" rel="noopener noreferrer"
+                  href="https://github.com/Amitesh218/bubbles.git" target="_blank" rel="noopener noreferrer"
                   className="text-pink-400 hover:text-blue-300 transition-colors my-4"
                 >
                   View Project →
@@ -87,13 +86,12 @@ export const Projects = () => {
               transition-all
             "
             >
-              <h3 className="text-xl font-bold mb-2">E-Commerce Web App</h3>
+              <h3 className="text-xl font-bold mb-2">AI Powered Student Assistance Chatbot</h3>
               <p className="text-gray-400 mb-4">
-                Full-stack e-commerce with modern UI, secure payment
-                integration, and customizable product inventory.
+              AI-Powered Student Assistance Chatbot for Department of Technical Education, Government of Rajasthan. 
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
-                {["Next.js", "TypeScript", "Stripe", "PostgreSQL"].map(
+                {["Node.js", "Vite", "Javascript", "Gemini API"].map(
                   (tech) => (
                     <span
                       key={tech}
@@ -112,7 +110,7 @@ export const Projects = () => {
               </div>
               <div className="flex justify-between items-center">
                 <a
-                  href="#" target="_blank" rel="noopener noreferrer"
+                  href="https://github.com/Amitesh218/AI-Powered-Student-Assistance-Chatbot.git" target="_blank" rel="noopener noreferrer"
                   className="text-pink-400 hover:text-blue-300 transition-colors my-4"
                 >
                   View Project →
@@ -128,13 +126,12 @@ export const Projects = () => {
               transition-all
             "
             >
-              <h3 className="text-xl font-bold mb-2">Real-Time Chat App</h3>
+              <h3 className="text-xl font-bold mb-2">My Portfolio</h3>
               <p className="text-gray-400 mb-4">
-                Scalable chat platform supporting real-time messaging, presence,
-                and group chat features.
+                This Website!
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
-                {["Socket.IO", "Express", "React", "Redis"].map((tech, key) => (
+                {["TailwindCSS", "React", "Vite", "Javascript"].map((tech, key) => (
                   <span
                     key={key}
                     className="
@@ -151,7 +148,7 @@ export const Projects = () => {
               </div>
               <div className="flex justify-between items-center ">
                 <a
-                  href="#" target="_blank" rel="noopener noreferrer"
+                  href="https://github.com/Amitesh218/amitesh218.github.io.git" target="_blank" rel="noopener noreferrer"
                   className="text-pink-400 hover:text-blue-300 transition-colors my-4"
                 >
                   View Project →
